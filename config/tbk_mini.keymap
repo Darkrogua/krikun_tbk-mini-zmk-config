@@ -13,72 +13,62 @@
 #define LWR 1
 #define RSE 2
 #define ADJ 3
-#define NAV 4
-
-&lt { quick-tap-ms = <200>; };
 
 &mt { quick-tap-ms = <200>; };
 
 / {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        tri-layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-
-        tri-layer1 {
-            if-layers = <4 1>;
-            then-layer = <3>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        DEF {
             bindings = <
-&mt LGUI RBKT    &kp Q  &kp W  &kp E      &kp R            &kp T        &kp Y      &kp U           &kp I      &kp O    &kp P     &kp LBKT
-&mt LCTRL GRAVE  &kp A  &kp S  &kp D      &kp F            &kp G        &kp H      &kp J           &kp K      &kp L    &kp SEMI  &mt RCTRL SQT
-&mt LALT MINUS   &kp Z  &kp X  &kp C      &kp V            &kp B        &kp N      &kp M           &kp COMMA  &kp DOT  &kp FSLH  &mt RALT BSLH
-                               &lt 2 TAB  &mt LSHFT SPACE  &lt 1 RET    &lt 1 ESC  &mt RSHFT BSPC  &lt 4 DEL
+                &kp KC_TAB &kp KC_Q &kp KC_W &kp KC_E &kp KC_R &kp KC_T
+                &kp KC_CAPSLOCK &kp KC_A &kp LGUI_T(KC_S) &kp LALT_T(KC_D) &kp LCTL_T(KC_F) &kp LSFT_T(KC_G)
+                &kp KC_GRAVE &kp KC_Z &kp KC_X &kp KC_C &kp KC_V &kp KC_B
+                &none &none &none &kp KC_ESCAPE &kp MO(1) &kp KC_SPACE
+                &kp KC_LBRACKET &kp KC_P &kp KC_O &kp KC_I &kp KC_U &kp KC_Y
+                &kp KC_QUOTE &kp KC_SCOLON &kp LGUI_T(KC_L) &kp LALT_T(KC_K) &kp LCTL_T(KC_J) &kp LSFT_T(KC_H)
+                &kp KC_RBRACKET &kp KC_SLASH &kp KC_DOT &kp KC_COMMA &kp KC_M &kp KC_N
+                &none &none &none &kp KC_BSPACE &kp MO(2) &kp KC_ENTER
             >;
         };
 
-        lower_layer {
+        LWR {
             bindings = <
-&mt LGUI F1     &kp F2    &kp F3  &kp F4    &kp F5    &kp F6       &kp F7     &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
-&mt LCTRL PLUS  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &mt RCTRL MINUS
-&mt LALT EQUAL  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5       &kp N6     &kp N7    &kp N8    &kp N9    &kp N0    &kp RALT
-                                  &trans    &trans    &trans       &trans     &trans    &trans
+                &kp KC_GRAVE &kp LSFT(KC_1) &kp LSFT(KC_2) &kp LSFT(KC_3) &kp LSFT(KC_4) &kp LSFT(KC_5)
+                &kp KC_CAPSLOCK &kp KC_1 &kp KC_2 &kp KC_3 &kp KC_4 &kp KC_5
+                &kp KC_ESCAPE &kp KC_SLASH &kp LSFT(KC_COMMA) &kp LSFT(KC_BSLASH) &kp LSFT(KC_DOT) &kp KC_BSLASH
+                &none &none &none &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+                &kp LSFT(KC_MINUS) &kp LSFT(KC_0) &kp LSFT(KC_9) &kp LSFT(KC_8) &kp LSFT(KC_7) &kp LSFT(KC_6)
+                &kp KC_MINUS &kp KC_0 &kp KC_9 &kp KC_8 &kp KC_7 &kp KC_6
+                &kp LSFT(KC_EQUAL) &kp KC_RBRACKET &kp LSFT(KC_RBRACKET) &kp KC_EQUAL &kp LSFT(KC_LBRACKET) &kp KC_LBRACKET
+                &none &none &none &kp KC_DELETE &kp MO(3) &kp KC_TRNS
             >;
         };
 
-        raise_layer {
+        RSE {
             bindings = <
-&mt LGUI KP_NUM  &kp KP_SLASH     &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS    &kp C_VOL_UP  &kp HOME  &kp PSCRN  &kp PG_UP  &kp SLCK         &kp CLCK
-&mt LCTRL EQUAL  &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS     &kp C_MUTE    &kp LEFT  &kp UP     &kp RIGHT  &kp INS          &mt RCTRL K_APP
-&kp LALT         &kp KP_N0        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT      &kp C_VOL_DN  &kp END   &kp DOWN   &kp PG_DN  &kp PAUSE_BREAK  &kp RALT
-                                             &trans     &trans     &trans          &trans        &trans    &trans
+                &kp KC_F1 &kp KC_F2 &kp KC_F3 &kp KC_F4 &kp KC_F5 &kp KC_F6
+                &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_NO
+                &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_NO
+                &none &none &none &kp KC_TRNS &kp MO(3) &kp KC_TRNS
+                &kp KC_F12 &kp KC_F11 &kp KC_F10 &kp KC_F9 &kp KC_F8 &kp KC_F7
+                &kp KC_NO &kp KC_NO &kp KC_RIGHT &kp KC_UP &kp KC_DOWN &kp KC_LEFT
+                &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_NO
+                &none &none &none &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
             >;
         };
 
-        adjust_layer {
+        ADJ {
             bindings = <
-&bootloader  &none         &none	     &none         &none         &studio_unlock  &none         &none         &none         &none         &none         &bootloader
-&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
-&sys_reset   &none         &none         &none         &none         &none           &none         &none         &none         &none         &none         &sys_reset
-                                         &trans        &none         &trans          &none         &trans        &trans
-            >;
-        };
-
-        navigation {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp UP    &kp LS(LC(LEFT_ARROW))  &kp LS(LC(RIGHT))  &kp HOME  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp DOWN  &kp LC(LEFT)            &kp LC(RIGHT)      &kp END   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans    &kp LG(LS(LEFT))        &kp LS(LG(RIGHT))  &trans    &trans  &trans
-                        &trans  &trans  &trans    &trans    &trans                  &trans
+                &kp RESET &kp KC_NO &kp KC_NO &kp KC_BRIU &kp KC_MNXT &kp KC_VOLU
+                &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_BRID &kp KC_MPRV &kp KC_VOLD
+                &kp KC_NO &kp KC_NO &kp KC_NO &kp KC_PSCREEN &kp KC_MSTP &kp KC_MPLY
+                &none &none &none &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
+                &kp KC_NO &kp KC_NO &kp KC_BTN2 &kp KC_BTN3 &kp KC_BTN1 &kp KC_NO
+                &kp KC_NO &kp KC_NO &kp KC_MS_R &kp KC_MS_U &kp KC_MS_D &kp KC_MS_L
+                &kp RGB_TOG &kp KC_NO &kp KC_WH_R &kp KC_WH_U &kp KC_WH_D &kp KC_WH_L
+                &none &none &none &kp KC_TRNS &kp KC_TRNS &kp KC_TRNS
             >;
         };
     };
