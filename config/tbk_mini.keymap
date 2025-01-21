@@ -59,11 +59,5 @@
 &bootloader  &none  &none  &none  &none  &studio_unlock  &none  &none  &none  &none  &none  &bootloader  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR  &sys_reset  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &sys_reset  &trans  &none  &trans  &none  &trans  &trans
             >;
         };
-
-        navigation {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &kp UP  &kp LS(LC(LEFT_ARROW))  &kp LS(LC(RIGHT))  &kp HOME  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp DOWN  &kp LC(LEFT)  &kp LC(RIGHT)  &kp END  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(LS(LEFT))  &kp LS(LG(RIGHT))  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
     };
 };
