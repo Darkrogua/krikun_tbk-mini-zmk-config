@@ -1,0 +1,13 @@
+# Local build/workspace artifacts (do not commit)
+build/
+.west/
+zmk/
+zephyr/
+modules/
+optional/
+tbk-mini-zmk-module/
+
+# Python venv
+.venv/
+
+
