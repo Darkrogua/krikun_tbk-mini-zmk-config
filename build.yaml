@@ -22,4 +22,8 @@ include:
   - board: nice_nano
     shield: tbk_mini_dongle
     cmake-args: -DBOARD_REVISION=2.0.0
+  - board: nice_nano
+    shield: tbk_mini_dongle
+    cmake-args: -DBOARD_REVISION=2.0.0 -DCONFIG_ZMK_SETTINGS_RESET_ON_START=y
+    artifact-name: tbk_mini_dongle_reset
 
