@@ -13,9 +13,9 @@
 #
 ---
 include:
-  - board: nice_nano
+  - board: promicro_nrf52840
     shield: tbk_mini_left
-  - board: nice_nano
+  - board: promicro_nrf52840
     shield: tbk_mini_right
-  - board: nice_nano
+  - board: promicro_nrf52840
     shield: tbk_mini_dongle
