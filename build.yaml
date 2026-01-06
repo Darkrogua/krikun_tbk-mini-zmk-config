@@ -19,13 +19,3 @@ include:
     shield: tbk_mini_right
   - board: nice_nano
     shield: tbk_mini_dongle
-  - board: nice_nano
-    shield: tbk_mini_left
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
-    artifact-name: tbk_mini_left_studio
-  - board: nice_nano
-    shield: tbk_mini_right
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
-    artifact-name: tbk_mini_right_studio
