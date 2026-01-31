@@ -62,7 +62,7 @@
 
         base {
             bindings = <
-&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp LBKT  &kp CLCK  &kp A  &lh_pht LEFT_GUI S  &lh_pht LEFT_ALT D  &lh_pht LEFT_CONTROL F  &lh_pht LEFT_SHIFT G  &rh_pht RIGHT_SHIFT H  &rh_pht RIGHT_CONTROL J  &rh_pht RIGHT_ALT K  &rh_pht RIGHT_GUI L  &kp SEMI  &kp GRAVE  &kp GRAVE  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_BRACKET  &kp ESCAPE  &kp SPACE  &sl 1  &kp ENTER  &kp BACKSPACE  &sl 2
+&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp LBKT  &kp CLCK  &kp A  &lh_pht LEFT_GUI S  &lh_pht LEFT_ALT D  &lh_pht LEFT_CONTROL F  &lh_pht LEFT_SHIFT G  &rh_pht RIGHT_SHIFT H  &rh_pht RIGHT_CONTROL J  &rh_pht RIGHT_ALT K  &rh_pht RIGHT_GUI L  &kp SEMI  &kp SQT  &kp GRAVE  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_BRACKET  &kp ESCAPE  &kp SPACE  &sl 1  &kp ENTER  &kp BACKSPACE  &sl 2
             >;
         };
 
