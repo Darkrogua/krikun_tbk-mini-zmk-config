@@ -43,6 +43,7 @@
             tapping-term-ms = <100>;
             quick-tap-ms = <275>;
             flavor = "tap-preferred";
+            hold-trigger-on-release;
         };
 
         rh_pht: rh_pht {
@@ -54,6 +55,7 @@
             tapping-term-ms = <100>;
             quick-tap-ms = <275>;
             flavor = "tap-preferred";
+            hold-trigger-on-release;
         };
     };
 
